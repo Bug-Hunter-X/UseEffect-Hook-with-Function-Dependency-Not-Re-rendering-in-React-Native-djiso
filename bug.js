@@ -1,0 +1,1 @@
+This bug occurs when using the `useEffect` hook in React Native with a dependency array that includes a function.  The function, if it closes over state variables, may not update when the state changes, leading to unexpected behavior. This is because the function itself is not considered a dependency unless it is recreated (a new reference).
